@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install": "npm run build",
+    "build": "cp lib/jsonpath-object-transform.js dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
