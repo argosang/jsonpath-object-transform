@@ -237,3 +237,42 @@ Result:
   }
 }
 ```
+Use '^' syntax like such: '$^.example' to use the root object within an array context.
+#### Example
+```js
+var template = {
+    foo: ['$..example', {
+        '$.key': '$^a.parentNode'
+    }, {merge: true}]
+};
+
+var data = {
+    a: {
+        parentNode: 'xyz',
+        example: {
+            key: 'a',
+            demo: 'baz'
+        }
+    },
+    b: {
+        parentNode: 'uvw',
+        example: [{
+            key: 'b',
+            demo: 'qux'
+        },{
+            key: 'c',
+            demo: 'max'
+        }]
+    }
+};
+```
+Result:
+```js
+{
+    foo: {
+        a: 'xyz',
+            b: 'xyz',
+            c: 'xyz'
+    }
+}
+```

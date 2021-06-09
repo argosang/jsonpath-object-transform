@@ -1,5 +1,5 @@
 {
-  "name": "jsonpath-object-transform",
+  "name": "jsonpath-object-transform-argosang",
   "version": "1.0.4",
   "description": "Transform an object literal using JSONPath.",
   "main": "index.js",
